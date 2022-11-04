@@ -2,7 +2,7 @@ import 'source-map-support/register'
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda'
 import * as middy from 'middy'
 import { cors, httpErrorHandler } from 'middy/middlewares'
-import { createPresignedUrl } from '../../helpers/attachmentUtils'
+import { createPresignedUrl } from '../../businessLogic/attachmentUtils'
 import { createLogger } from '../../utils/logger'
 const logger = createLogger('Generate Upload Url');
 export const handler = middy(

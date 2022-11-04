@@ -2,9 +2,9 @@ import * as middy from 'middy'
 import { cors, httpErrorHandler } from 'middy/middlewares'
 import 'source-map-support/register'
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda'
-import { removeTodoAttachment } from '../../helpers/todos'
+import { removeTodoAttachment } from '../../businessLogic/todos'
 import { getUserId } from '../utils'
-import { removeAttachment } from '../../helpers/attachmentUtils'
+import { removeAttachment } from '../../businessLogic/attachmentUtils'
 
 export const handler = middy(
   async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {

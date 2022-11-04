@@ -3,7 +3,7 @@ import 'source-map-support/register';
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
 import * as middy from 'middy';
 import { cors, httpErrorHandler } from 'middy/middlewares';
-import { createDownloadedUrl } from '../../helpers/attachmentUtils'
+import { createDownloadedUrl } from '../../businessLogic/attachmentUtils'
 import { createLogger } from '../../utils/logger'
 
 const logger = createLogger('Generate Download URL');

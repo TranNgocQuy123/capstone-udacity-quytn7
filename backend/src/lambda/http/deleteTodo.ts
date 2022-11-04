@@ -2,8 +2,8 @@ import 'source-map-support/register'
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda'
 import * as middy from 'middy'
 import { cors, httpErrorHandler } from 'middy/middlewares'
-import { deleteTodo } from '../../helpers/todos'
-import { removeAttachment } from '../../helpers/attachmentUtils'
+import { deleteTodo } from '../../businessLogic/todos'
+import { removeAttachment } from '../../businessLogic/attachmentUtils'
 import { getUserId } from '../utils'
 
 export const handler = middy(
