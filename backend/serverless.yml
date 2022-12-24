@@ -1,6 +1,6 @@
 # TODO: Change the name of the org
 org: quytmt
-service: serverless-app-quytn7-capstone
+service: serverless-app-quytn7-capstone-01
 
 plugins:
   - serverless-webpack
@@ -127,7 +127,7 @@ functions:
             Resource: arn:aws:s3:::${self:provider.environment.ATTACHMENT_S3_BUCKET}/*
   # TODO: Configure this function
   # Provide property for setting up CORS, Authorizer, iamRoleStatements
-  GenerateUploadUrl:
+  GenerateUpFile:
     handler: src/lambda/http/generateUploadUrl.handler
     events:
       - http:
